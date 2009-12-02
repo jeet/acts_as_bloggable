@@ -1,13 +1,13 @@
 ActsAsBloggable
 ===============
 
-Introduction goes here.
+Blogging system for your Rails app
 
 
 Example
 =======
 
-Example goes here.
+Install it , ./script/plugin install git://github.com/jeet/acts_as_bloggable.git
 
 
-Copyright (c) 2009 [name of plugin creator], released under the MIT license
+Copyright (c) 2009 [Ajay Maurya], released under the MIT license
