@@ -1,0 +1,25 @@
+h1 Listing versions
+
+table
+  tr
+    th Name
+    th Description
+    th Versionable
+    th Versionable type
+    th
+    th
+    th
+
+  - @versions.each do |version|
+    tr
+      td = version.name
+      td = version.description
+      td = version.versionable_id
+      td = version.versionable_type
+      td = link_to 'Show', version
+      td = link_to 'Edit', edit_version_path(version)
+      td = link_to 'Destroy', version, :confirm => 'Are you sure?', :method => :delete
+
+br
+
+= link_to 'New Version', new_version_path

@@ -1,0 +1,25 @@
+require 'spec_helper'
+
+describe "posts/show" do
+  before(:each) do
+    @post = assign(:post, stub_model(Post,
+      :title => "Title",
+      :content => "MyText",
+      :summary => "MyText",
+      :permalink => "Permalink",
+      :rendering_engine => "Rendering Engine",
+      :state => "State"
+    ))
+  end
+
+  it "renders attributes in <p>" do
+    render
+    # Run the generator again with the --webrat flag if you want to use webrat matchers
+    rendered.should match(/Title/)
+    rendered.should match(/MyText/)
+    rendered.should match(/MyText/)
+    rendered.should match(/Permalink/)
+    rendered.should match(/Rendering Engine/)
+    rendered.should match(/State/)
+  end
+end

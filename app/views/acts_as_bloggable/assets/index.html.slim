@@ -1,0 +1,25 @@
+h1 Listing assets
+
+table
+  tr
+    th Name
+    th Description
+    th Assetable
+    th Assetable type
+    th
+    th
+    th
+
+  - @assets.each do |asset|
+    tr
+      td = asset.name
+      td = asset.description
+      td = asset.assetable_id
+      td = asset.assetable_type
+      td = link_to 'Show', asset
+      td = link_to 'Edit', edit_asset_path(asset)
+      td = link_to 'Destroy', asset, :confirm => 'Are you sure?', :method => :delete
+
+br
+
+= link_to 'New Asset', new_asset_path

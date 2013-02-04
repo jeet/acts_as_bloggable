@@ -1,0 +1,21 @@
+p#notice = notice
+
+p
+  strong Title:
+  = @page.title
+p
+  strong Content:
+  = @page.content
+p
+  strong Summary:
+  = @page.summary
+p
+  strong Permalink:
+  = @page.permalink
+p
+  strong Published at:
+  = @page.published_at
+
+= link_to 'Edit', edit_page_path(@page)
+'|
+= link_to 'Back', pages_path

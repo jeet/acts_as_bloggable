@@ -1,0 +1,18 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @version.name
+p
+  strong Description:
+  = @version.description
+p
+  strong Versionable:
+  = @version.versionable_id
+p
+  strong Versionable type:
+  = @version.versionable_type
+
+= link_to 'Edit', edit_version_path(@version)
+'|
+= link_to 'Back', versions_path

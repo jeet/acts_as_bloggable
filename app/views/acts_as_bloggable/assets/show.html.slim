@@ -1,0 +1,18 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @asset.name
+p
+  strong Description:
+  = @asset.description
+p
+  strong Assetable:
+  = @asset.assetable_id
+p
+  strong Assetable type:
+  = @asset.assetable_type
+
+= link_to 'Edit', edit_asset_path(@asset)
+'|
+= link_to 'Back', assets_path

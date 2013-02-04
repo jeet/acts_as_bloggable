@@ -1,0 +1,31 @@
+h1 Listing posts
+
+table
+  tr
+    th Title
+    th Content
+    th Summary
+    th Permalink
+    th Rendering engine
+    th State
+    th Published at
+    th
+    th
+    th
+
+  - @posts.each do |post|
+    tr
+      td = post.title
+      td = post.content
+      td = post.summary
+      td = post.permalink
+      td = post.rendering_engine
+      td = post.state
+      td = post.published_at
+      td = link_to 'Show', post
+      td = link_to 'Edit', edit_post_path(post)
+      td = link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete
+
+br
+
+= link_to 'New Post', new_post_path
